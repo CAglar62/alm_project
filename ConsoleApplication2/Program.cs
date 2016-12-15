@@ -19,6 +19,7 @@ namespace ConsoleApplication2
             Console.WriteLine("ASD");
             /////
             double result;
+            String stringResult;
             //////////////
             Console.WriteLine("Enter your choice(addition: 1),(subtraction:  2), (division:  3)\n" + 
                 "(tangent: 4), (cotangent: 5)");
@@ -52,7 +53,7 @@ namespace ConsoleApplication2
             {
                 Console.WriteLine("Enter angle: ");
                 double a = Double.Parse(Console.ReadLine());
-                result = p1.tangent(a);
+                stringResult = p1.tangent(a);
             }
             else if (choice == 5)//cotangent
             {
