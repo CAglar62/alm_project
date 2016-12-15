@@ -19,7 +19,8 @@ namespace ConsoleApplication2
             /////
             double result;
             //////////////
-            Console.WriteLine("Enter your choice(addition: 1),(subtraction:  2), (division:  3)");
+            Console.WriteLine("Enter your choice(addition: 1),(subtraction:  2), (division:  3)\n" + 
+                "(tangent: 4), (cotangent: 5)");
             int choice = Convert.ToInt32(Console.ReadLine());
             
             if (choice == 1)
@@ -45,6 +46,18 @@ namespace ConsoleApplication2
                 Console.WriteLine("Enter second number: ");
                 double b = Double.Parse(Console.ReadLine());
                 result = p1.division(a, b);
+            }
+            else if (choice == 4)//tangent
+            {
+                Console.WriteLine("Enter angle: ");
+                double a = Double.Parse(Console.ReadLine());
+                result = p1.tangent(a);
+            }
+            else if (choice == 5)//cotangent
+            {
+                Console.WriteLine("Enter angle: ");
+                double a = Double.Parse(Console.ReadLine());
+                result = p1.cotangent(a);
             }
 
         }
@@ -73,6 +86,22 @@ namespace ConsoleApplication2
             result =a / b;
             Console.WriteLine("Result is  " + result);
             return result;           
+        }
+        public String tangent(double angle)
+        {
+
+            double radians = angle * (Math.PI / 180);
+            double result = Math.Tan(radians);
+            Console.WriteLine("Result is  " + result);
+            return result +"";
+        }
+        public double cotangent(double angle)
+        {
+
+            double radians = angle * (Math.PI / 180);
+            double result = 1/Math.Tan(radians);
+            Console.WriteLine("Result is  " + result);
+            return result;
         }
     }
 }
