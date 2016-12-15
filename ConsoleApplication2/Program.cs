@@ -29,7 +29,7 @@ namespace ConsoleApplication2
             if (choice == 1)
             {
                 Console.WriteLine("Enter first number: ");
-                double a = Convert.ToDouble(Console.ReadLine());
+                double a = Convert.ToDouble(Console.ReadLine());//hello my name is hakank
                 Console.WriteLine("Enter second number: ");
                 double b = Convert.ToDouble(Console.ReadLine());
                 result = p1.addition(a,b);
