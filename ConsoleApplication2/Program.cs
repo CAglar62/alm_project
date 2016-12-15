@@ -90,15 +90,15 @@ namespace ConsoleApplication2
         }
         public String tangent(double angle)
         {
-
-            double radians = angle * (Math.PI / 180);
             double result;
-            if(radians%360 == 90)
-            {
+            if (angle % 360 == 90) {
+                Console.WriteLine("Result is  infinity");
                 return "infinity";
+                
             }
             else
             {
+                double radians = angle * (Math.PI / 180);
                 result = Math.Tan(radians);
                 Console.WriteLine("Result is  " + result);
                 return result + "";
