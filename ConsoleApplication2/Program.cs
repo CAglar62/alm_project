@@ -92,9 +92,18 @@ namespace ConsoleApplication2
         {
 
             double radians = angle * (Math.PI / 180);
-            double result = Math.Tan(radians);
-            Console.WriteLine("Result is  " + result);
-            return result +"";
+            double result;
+            if(radians%360 == 90)
+            {
+                return "infinity";
+            }
+            else
+            {
+                result = Math.Tan(radians);
+                Console.WriteLine("Result is  " + result);
+                return result + "";
+            }
+            
         }
         public double cotangent(double angle)
         {
