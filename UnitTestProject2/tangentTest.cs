@@ -13,6 +13,7 @@ namespace UnitTestProject2
         {
             String result = p1.tangent(90);
             //String expected = "infitiny";
+            // will be changed
             Assert.AreEqual("asd", "asd");
         }
     }
